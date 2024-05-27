@@ -1256,6 +1256,11 @@ input:checked + .toggle-bg {
   margin-bottom: 0.5rem;
 }
 
+.mx-6 {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+
 .mb-1 {
   margin-bottom: 0.25rem;
 }
@@ -3738,6 +3743,10 @@ html {
 
   .md\:w-auto {
     width: auto;
+  }
+
+  .md\:w-3\/5 {
+    width: 60%;
   }
 
   .md\:flex-row {

@@ -46,7 +46,7 @@
     </h1>
 
     <div class="flex md:flex-row flex-col gap-10 md:m-16 m-4 justify-center items-center">
-      <img src="./assets/disaster.webp" alt="Disaster" class=" lg:w-3/5 md:w-4/5 sm:w-full" /> 
+      <img src="./assets/disaster.webp" alt="Disaster" class=" lg:w-3/5 md:w-3/5 sm:w-full" /> 
       <div>
         <h3 class="text-lg">And this is our project, <strong>Natural accidents make vacant pavements due to internal displacements</strong>, <em>a study on how the natural disaster risk reduction policies of the Philippines have affected the country, as well as how effective this is in comparison to other countries</em>. In this study, we aim to look at trends relating to forced internal displacement due to natural disasters of the 21st century using data from the Philippines, along with other South-east Asian countries.</h3>
         <br />
@@ -81,6 +81,11 @@
           Utilize data science to acquire <span class="text-secondary">insight into internal displacement trends</span> resulting from natural disasters, which can be used as a guide to proactive measures for disaster risk reduction and response.
         </p>
       </div>
+    </div>
+
+    <div class="my-10 mx-6 lg:mx-24 text-left">
+      <h1 class="text-lg text-primary mb-6"><b class="text-secondary">Research Question 1:</b> What are the <b>trends in internal displacement</b> caused by natural disasters in the Philippines, and how does it <b>compare to other Southeast Asian countries?</b></h1>
+      <h1 class="text-lg text-primary mb-6"><b class="text-secondary">Research Question 2:</b> How does the <b>type of natural disaster</b> and the existing policies influence the number of displaced individuals within the Philippines?</h1>
     </div>
 
     <div>
@@ -192,7 +197,7 @@
     </div>
   </section>
 
-  <section id="results" class="lg:px-24 lg:py-6 px-4 py-2 text-left">
+  <section id="methods" class="lg:px-24 lg:py-6 px-4 py-2 text-left">
     <h1 class="text-3xl font-bold text-primary text-center">Methods</h1>
 
     <h3 class="text-xl font-semibold my-6 mx-2 md:mx-6 lg:mx-24">
@@ -204,18 +209,26 @@
       Visualization
     </h3>
     <div class="flex flex-col md:flex-row items-center justify-center gap-10 my-2 lg:mx-24">
-      <div class="bg-primary border border-gray-800 shadow w-5/6">
-        <img class="" src="./RQ1.png" alt="RQ1" />
-        <div class="p-5">
-            <h5 class="text-2xl font-bold tracking-tight text-white mb-3">Total Internal Displacements in Indonesia, Philippines, and Vietnam from 2008 to 2022.</h5>
-            <p class="mb-3 font-normal text-white">The graph presents a time series showing the number of internal displacements overtime due to natural disasters. Here, the Philippines has evidently higher peaks and troughs compared to the other two countries</p>
+      <div class="w-5/6">
+        <div class="bg-primary border border-gray-800 shadow">
+          <img class="" src="./RQ1.png" alt="RQ1" />
+          <div class="p-5">
+              <h5 class="text-2xl font-bold tracking-tight text-white mb-3">Total Internal Displacements in Indonesia, Philippines, and Vietnam from 2008 to 2022.</h5>
+              <p class="mb-3 font-normal text-white">To answer <b>research question 1</b>, we want to visualize the number of internal displacement reports in the three Southeast Asian countries (Philippines, Vietnam, and Indonesia) over the years (2008-2022).</p>
+
+              <p class="mb-3 font-normal text-white">From initial observation, it is apparent that the number of internal displaced persons in the Philippines is consistently higher than the two other countries, with Vietnam and Indonesia never going above 2,000,000, and the Philippines going as high as 7,000,000. The significance of such difference between the countries is left to the hypothesis testing (see Hypothesis Test), but initial observation indicates greater displacement in the Philippines compared to other Southeast Asian countries like Vietnam and Indonesia.</p>
+
+              <p class="mb-3 font-normal text-white">Some notable events in the Philippines include the Super Typhoon Yolanda (2013), Super Typhoon Glenda (2014), and Super Typhoon Ferdie (2016).</p>
+          </div>
         </div>
       </div>
-      <div class="bg-primary border border-gray-800 shadow w-5/6">
-        <img class="" src="./RQ2.png" alt="RQ2" />
-        <div class="p-5">
-            <h5 class="text-2xl font-bold tracking-tight text-white mb-3">Total Internal Displacements per Natural Disasters in the Philippines from 2008 to 2022</h5>
-            <p class="mb-3 font-normal text-white">The graph shows a bar graph that distribute the internal displacements per natural disasters. We can see that storm and flood are the most common cause of displacements every year, which we can relate to the Philippines being geographically near the Pacific ocean.</p>
+      <div class="w-5/6">
+        <div class="bg-primary border border-gray-800 shadow ">
+          <img class="" src="./RQ2.png" alt="RQ2" />
+          <div class="p-5">
+              <h5 class="text-2xl font-bold tracking-tight text-white mb-3">Total Internal Displacements per Natural Disasters in the Philippines from 2008 to 2022</h5>
+              <p class="mb-3 font-normal text-white">The graph shows a bar graph that distribute the internal displacements per natural disasters. We can see that storm and flood are the most common cause of displacements every year, which we can relate to the Philippines being geographically near the Pacific ocean.</p>
+          </div>
         </div>
       </div>
     </div>
@@ -253,7 +266,7 @@
 
   <section id="team" class="lg:px-24 lg:py-6 px-4 py-2 text-black ">
     <h1 class="text-3xl font-bold text-primary text-center mb-10">Team</h1>
-    <div class="flex flex-col md:flex-row items-center justify-center gap-10">
+    <div class="flex flex-col md:flex-row items-start justify-center gap-10">
       <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow">
         <img class="rounded-t-lg object-cover" src="./assets/will.jpg" alt="Will" />
         <div class="p-5">
@@ -263,19 +276,19 @@
         </div>
       </div>
       <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow">
-        <img class="rounded-t-lg object-cover" src="./assets/will.jpg" alt="Will" />
+        <img class="rounded-t-lg object-cover" src="./assets/alquen.jpg" alt="Will" />
         <div class="p-5">
-            <h5 class="text-2xl font-bold tracking-tight text-primary">Will Bryan E. Jose</h5>
-            <p class="mb-5 font-normal text-gray-700">willjose51@gmail.com</p>
-            <p class="mb-3 font-normal text-gray-700">"When there's a Will, there's a way"</p>
+            <h5 class="text-2xl font-bold tracking-tight text-primary">Alquen Antonio D. Sarmiento</h5>
+            <p class="mb-5 font-normal text-gray-700">adsarmiento3@up.edu.ph</p>
+            <p class="mb-3 font-normal text-gray-700">"Success is not final; failure is not fatal: it is the courage to continue that counts.</p>
         </div>
       </div>
       <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow">
         <img class="rounded-t-lg object-cover" src="./assets/will.jpg" alt="Will" />
         <div class="p-5">
-            <h5 class="text-2xl font-bold tracking-tight text-primary">Will Bryan E. Jose</h5>
-            <p class="mb-5 font-normal text-gray-700">willjose51@gmail.com</p>
-            <p class="mb-3 font-normal text-gray-700">"When there's a Will, there's a way"</p>
+            <h5 class="text-2xl font-bold tracking-tight text-primary">Amiel David P. Zamuco</h5>
+            <p class="mb-5 font-normal text-gray-700">zamucodavid@gmail.com</p>
+            <p class="mb-3 font-normal text-gray-700">"A person who thinks all the time has nothing to think about except thoughts"</p>
         </div>
       </div>
     </div>
