@@ -27,13 +27,13 @@
             <a href="#data" class="block py-2 px-3 text-white rounded md:bg-transparent" aria-current="page">Data</a>
           </li>
           <li>
-            <a href="#" class="block py-2 px-3 text-white rounded md:bg-transparent" aria-current="page">Methods</a>
+            <a href="#methods" class="block py-2 px-3 text-white rounded md:bg-transparent" aria-current="page">Methods</a>
           </li>
           <li>
-            <a href="#" class="block py-2 px-3 text-white rounded md:bg-transparent" aria-current="page">Results</a>
+            <a href="#results" class="block py-2 px-3 text-white rounded md:bg-transparent" aria-current="page">Results</a>
           </li>
           <li>
-            <a href="#" class="block py-2 px-3 text-white rounded md:bg-transparent" aria-current="page">Team</a>
+            <a href="#team" class="block py-2 px-3 text-white rounded md:bg-transparent" aria-current="page">Team</a>
           </li>
         </ul>
       </div>
@@ -48,10 +48,10 @@
     <div class="flex md:flex-row flex-col gap-10 md:m-16 m-4 justify-center items-center">
       <img src="./assets/disaster.webp" alt="Disaster" class=" lg:w-3/5 md:w-4/5 sm:w-full" /> 
       <div>
-        <h3 class="text-lg">Our project is an analysis of Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h3>
+        <h3 class="text-lg">And this is our project, <strong>Natural accidents make vacant pavements due to internal displacements</strong>, <em>a study on how the natural disaster risk reduction policies of the Philippines have affected the country, as well as how effective this is in comparison to other countries</em>. In this study, we aim to look at trends relating to forced internal displacement due to natural disasters of the 21st century using data from the Philippines, along with other South-east Asian countries.</h3>
         <br />
         <br />
-        <p class="text-sm">Photo taken from: casmcbasncba mnscbansbmanscasjncsknckmdnkm</p>
+        <p class="text-sm">Photo taken from: <a href="https://www.britannica.com/science/disaster" class="underline">Britannica</a> featuring the aftermath of Super Typhoon Haiyan in Tacloban, Philippnes</p>
       </div>
       
     </div>
@@ -108,7 +108,7 @@
     </div>
   </section>
 
-  <section id="data" class="lg:px-24 lg:py-6 px-4 py-2 text-black ">
+  <section id="data" class="lg:px-24 lg:py-6 px-4 py-2 mb-12 text-black ">
     <h1 class="text-3xl font-bold text-primary text-center mb-10">Data</h1>
     <div class="flex flex-col md:flex-row items-center justify-center gap-12">
       <div class="text-center">
@@ -190,6 +190,45 @@
         </div>
       </div>
     </div>
+  </section>
+
+  <section id="results" class="lg:px-24 lg:py-6 px-4 py-2 text-left">
+    <h1 class="text-3xl font-bold text-primary text-center">Methods</h1>
+    <h3 class="text-xl font-semibold my-6 mx-2 md:mx-6 lg:mx-24">
+      Hypothesis Testing
+    </h3>
+    <p class="my-2 lg:mx-24">To determine whether a significant difference exists among the three southeast asian countries, a one-way ANOVA is performed, with the country as the predictor variable and the number of internally displaced persons as the outcome variable</p>
+    <div class="flex justify-center">
+      <img src="./assets/hypo_test.png" alt="ANOVA" class="my-6 lg:mx-24" />
+    </div>
+    <p class="my-2 lg:mx-24">The one way ANOVA's result reveal a p-value of 1.67e-12, which is less than 0.05. This means we reject the null hypothesis, indicating that there is a significant difference among the three countries (PH, VN, ID) in terms of their internal displacement</p>
+    <p class="my-2 lg:mx-24">Despite being within the same area in southeast asia, there appears to be a difference in displacement patterns. Based on initial data exploration (and as observed from the plots answering the research questions), this difference is most likely due to Philippines having a much higher displacement compared to the other two countries. However, the data could be influenced by other factors as well (e.g., unreported events causing low displacement figures), so it is best to conduct further tests upon availability of data to derive definite conclusions.</p>
+
+    
+  </section>
+
+  <section id="results" class="lg:px-24 lg:py-6 px-4 py-2 text-center">
+    <h1 class="text-3xl font-bold text-primary">Results</h1>
+
+    <h3 class="text-xl text-center font-semibold my-10 lg:mx-24">
+      Here are the results of our analysis.
+    </h3>
+
+    <div class="flex flex-col md:flex-row items-center justify-center gap-10">
+      <div class="bg-primary border border-gray-800 rounded-lg shadow w-1/2">
+        <img class="" src="./RQ1.png" alt="RQ1" />
+        <div class="p-5">
+            <h5 class="text-2xl font-bold tracking-tight text-white mb-3">RQ1</h5>
+            <p class="mb-3 font-normal text-white">Lorem ipsum dolor sit amet</p>
+        </div>
+      </div>
+      <div class="bg-primary border border-gray-800 rounded-lg shadow w-1/2">
+        <img class="" src="./RQ2.png" alt="RQ2" />
+        <div class="p-5">
+            <h5 class="text-2xl font-bold tracking-tight text-white mb-3">RQ2</h5>
+            <p class="mb-3 font-normal text-white">Lorem ipsum dolor sit amet</p>
+        </div>
+      </div>
   </section>
 
   <section id="team" class="lg:px-24 lg:py-6 px-4 py-2 text-black ">

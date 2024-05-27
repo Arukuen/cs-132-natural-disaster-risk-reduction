@@ -1178,10 +1178,6 @@ input:checked + .toggle-bg {
   z-index: 50;
 }
 
-.z-0 {
-  z-index: 0;
-}
-
 .float-start {
   float: inline-start;
 }
@@ -1230,8 +1226,9 @@ input:checked + .toggle-bg {
   margin: 1rem;
 }
 
-.m-6 {
-  margin: 1.5rem;
+.mx-2 {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
 }
 
 .mx-4 {
@@ -1249,12 +1246,26 @@ input:checked + .toggle-bg {
   margin-bottom: 2.5rem;
 }
 
+.my-6 {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.my-2 {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
 .mb-1 {
   margin-bottom: 0.25rem;
 }
 
 .mb-10 {
   margin-bottom: 2.5rem;
+}
+
+.mb-12 {
+  margin-bottom: 3rem;
 }
 
 .mb-2 {
@@ -1265,8 +1276,16 @@ input:checked + .toggle-bg {
   margin-bottom: 6rem;
 }
 
+.mb-3 {
+  margin-bottom: 0.75rem;
+}
+
 .mb-4 {
   margin-bottom: 1rem;
+}
+
+.mb-5 {
+  margin-bottom: 1.25rem;
 }
 
 .mb-6 {
@@ -1279,22 +1298,6 @@ input:checked + .toggle-bg {
 
 .mt-4 {
   margin-top: 1rem;
-}
-
-.mb-3 {
-  margin-bottom: 0.75rem;
-}
-
-.ms-2 {
-  margin-inline-start: 0.5rem;
-}
-
-.mb-5 {
-  margin-bottom: 1.25rem;
-}
-
-.mb-12 {
-  margin-bottom: 3rem;
 }
 
 .box-border {
@@ -1420,20 +1423,16 @@ input:checked + .toggle-bg {
   height: 2.25rem;
 }
 
-.h-3\.5 {
-  height: 0.875rem;
-}
-
-.h-full {
-  height: 100%;
-}
-
 .w-1\/2 {
   width: 50%;
 }
 
 .w-10 {
   width: 2.5rem;
+}
+
+.w-2\/12 {
+  width: 16.666667%;
 }
 
 .w-3 {
@@ -1446,10 +1445,6 @@ input:checked + .toggle-bg {
 
 .w-5 {
   width: 1.25rem;
-}
-
-.w-6\/12 {
-  width: 50%;
 }
 
 .w-64 {
@@ -1470,18 +1465,6 @@ input:checked + .toggle-bg {
 
 .w-full {
   width: 100%;
-}
-
-.w-3\.5 {
-  width: 0.875rem;
-}
-
-.w-1\/12 {
-  width: 8.333333%;
-}
-
-.w-2\/12 {
-  width: 16.666667%;
 }
 
 .max-w-screen-xl {
@@ -2080,16 +2063,12 @@ input:checked + .toggle-bg {
   gap: 0.75rem;
 }
 
-.gap-8 {
-  gap: 2rem;
-}
-
 .gap-4 {
   gap: 1rem;
 }
 
-.gap-24 {
-  gap: 6rem;
+.gap-8 {
+  gap: 2rem;
 }
 
 .space-x-2 > :not([hidden]) ~ :not([hidden]) {
@@ -2589,14 +2568,19 @@ input:checked + .toggle-bg {
   border-color: rgb(243 244 246 / var(--tw-border-opacity));
 }
 
+.border-gray-200 {
+  --tw-border-opacity: 1;
+  border-color: rgb(229 231 235 / var(--tw-border-opacity));
+}
+
 .border-gray-300 {
   --tw-border-opacity: 1;
   border-color: rgb(209 213 219 / var(--tw-border-opacity));
 }
 
-.border-gray-200 {
+.border-gray-800 {
   --tw-border-opacity: 1;
-  border-color: rgb(229 231 235 / var(--tw-border-opacity));
+  border-color: rgb(31 41 55 / var(--tw-border-opacity));
 }
 
 .bg-\[rgb\(255\2c 0\2c 0\)\] {
@@ -2779,10 +2763,6 @@ input:checked + .toggle-bg {
 
 .p-8 {
   padding: 2rem;
-}
-
-.p-6 {
-  padding: 1.5rem;
 }
 
 .px-2 {
@@ -3048,6 +3028,11 @@ input:checked + .toggle-bg {
   color: rgb(107 114 128 / var(--tw-text-opacity));
 }
 
+.text-gray-700 {
+  --tw-text-opacity: 1;
+  color: rgb(55 65 81 / var(--tw-text-opacity));
+}
+
 .text-gray-800 {
   --tw-text-opacity: 1;
   color: rgb(31 41 55 / var(--tw-text-opacity));
@@ -3071,11 +3056,6 @@ input:checked + .toggle-bg {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
-.text-gray-700 {
-  --tw-text-opacity: 1;
-  color: rgb(55 65 81 / var(--tw-text-opacity));
 }
 
 .underline {
@@ -3708,11 +3688,6 @@ html {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
-.dark\:focus\:ring-blue-800:focus:is(.dark *) {
-  --tw-ring-opacity: 1;
-  --tw-ring-color: rgb(30 66 159 / var(--tw-ring-opacity));
-}
-
 @media (min-width: 640px) {
   .sm\:w-full {
     width: 100%;
@@ -3728,6 +3703,11 @@ html {
     margin: 4rem;
   }
 
+  .md\:mx-6 {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+  }
+
   .md\:mt-0 {
     margin-top: 0px;
   }
@@ -3740,24 +3720,20 @@ html {
     display: none;
   }
 
-  .md\:w-4\/5 {
-    width: 80%;
+  .md\:w-4\/12 {
+    width: 33.333333%;
   }
 
-  .md\:w-auto {
-    width: auto;
+  .md\:w-4\/5 {
+    width: 80%;
   }
 
   .md\:w-9\/12 {
     width: 75%;
   }
 
-  .md\:w-3\/12 {
-    width: 25%;
-  }
-
-  .md\:w-4\/12 {
-    width: 33.333333%;
+  .md\:w-auto {
+    width: auto;
   }
 
   .md\:flex-row {
@@ -3794,36 +3770,16 @@ html {
     margin-right: 6rem;
   }
 
+  .lg\:w-3\/12 {
+    width: 25%;
+  }
+
   .lg\:w-3\/5 {
     width: 60%;
   }
 
   .lg\:w-6\/12 {
     width: 50%;
-  }
-
-  .lg\:w-9\/12 {
-    width: 75%;
-  }
-
-  .lg\:w-5\/12 {
-    width: 41.666667%;
-  }
-
-  .lg\:w-2\/12 {
-    width: 16.666667%;
-  }
-
-  .lg\:w-1\/12 {
-    width: 8.333333%;
-  }
-
-  .lg\:w-8\/12 {
-    width: 66.666667%;
-  }
-
-  .lg\:w-3\/12 {
-    width: 25%;
   }
 
   .lg\:flex-row {
