@@ -200,7 +200,9 @@
         </h2>
         <div id="accordion-collapse-body-4" class="hidden" aria-labelledby="accordion-collapse-heading-4">
           <div class="p-5 border-gray-300 border-b-[1px] ">
-            <p class="mb-2">This leads to the dataset with columns ISO3, Country / Territory, Year, Disaster Internal Displacements (Raw), and Hazard Type.</p>
+            <p class="mb-2">The raw data has the following columns:
+				Event name, Data of Event, Disaster Internal Displacements, Hazard Category, Hazard Sub Type, Event codes, ISO3, Country / Territory, Year, Disaster Internal Displacements (Raw), and Hazard Type.
+				</p>
           </div>
         </div> 
       </div>
@@ -232,7 +234,7 @@
     <div class="flex flex-col md:flex-row items-center justify-center gap-10 lg:mx-24 md:items-start">
       <div class="bg-gray-300 border text-left rounded-md shadow w-1/2">
         <h5 class="text-2xl font-bold tracking-tight mb-3 bg-darkerblue rounded-t-md text-white px-4 py-2">Research Question 1</h5>
-        <div class="py-4 px-2 font-semibold text-lg text-justify">
+        <div class="py-4 px-2 font-semibold text-base text-justify">
           <p class="mb-2 mx-4">The one way ANOVA's result reveal a <span class="text-secondary">p-value of 1.67e-12</span>, which is less than 0.05. This means we reject the null hypothesis, indicating that there is <span class="text-secondary">a significant difference among the three countries (PH, VN, ID)</span> in terms of their internal displacement</p>
           <p class="mb-2 mx-4">Despite being within the same area in southeast asia, there appears to be a difference in displacement patterns. Based on initial data exploration (and as observed from the plots answering the research questions), this difference is most likely due to <span class="text-secondary">Philippines having a much higher displacement compared to the other two countries</span>. However, the data could be influenced by other factors as well (e.g., unreported events causing low displacement figures), so it is best to conduct further tests upon availability of data to derive definite conclusions.</p>
         </div>
@@ -240,7 +242,7 @@
       </div>
       <div class="bg-gray-300 border text-left rounded-md shadow w-1/2">
         <h5 class="text-2xl font-bold tracking-tight mb-3 bg-darkerblue rounded-t-md text-white px-4 py-2">Research Question 2</h5>
-        <div class="py-4 px-2 font-semibold text-lg text-justify">
+        <div class="py-4 px-2 font-semibold text-base text-justify">
           <p class="mb-2 mx-4">To provide a brief review of the existing policies, the <span class="text-secondary">Republic Act No. 10121</span> otherwise known as the <span class="text-secondary">“Philippine Disaster Risk Reduction and Management (DRRM) Act of 2010”</span> was signed into law on May 27, 2010 in order to improve the country's disaster risk reduction management system. In 2012, the <span class="text-secondary">National Disaster Risk Reduction and Management Plan (NDRRMP)</span>, a plan outlining programs, activities, and objectives in strengthening disaster preparedness by 2028 was approved.</p>
           <p class="mb-2 mx-4">The effect of typhoons can be seen in policy-making, especially when the budget for DRRM saw a huge <span class="text-secondary">178% increase in 2013 following the effects of Typhoon Yolanda</span>, and a lot of the efforts have been put into plans for flood monitoring and early warning systems.</p>
           <p class="mb-4 mx-4">That said, while the plans and policies such as the NDRRMP are promising, it seems that there is a particular challenge in its implementation, with some citing <span class="text-secondary">lack of funding, weak coordination, and a lack of capacity of LGUs in terms of manpower, technical knowledge, and technology resource</span>. </p>
@@ -299,8 +301,8 @@
             <p class="text-lg">Since the data was already validated from the database of <span class="text-secondary">iDMC</span>, data preprocessing is limited to choosing from the categories provided from the dataset. We remove the following columns:</p>
             <ul class="px-16">
               <li class="mt-2"><strong class="font-semibold">Event name</strong>- since we are more interested in the number of events per year rather than each individual event</li>
-              <li class="mt-2"><strong class="font-semibold">Data of Event</strong>- since an existing <strong>Year</strong> column will be used in place of this</li>
-              <li class="mt-2"><strong class="font-semibold">Disaster Internal Displacements</strong>, since an existing <strong>Disaster Internal Displacements (Raw)</strong> column is more precise</li>
+              <li class="mt-2"><strong class="font-semibold">Data of Event</strong>- since an existing <strong class="font-medium">Year</strong> column will be used in place of this</li>
+              <li class="mt-2"><strong class="font-semibold">Disaster Internal Displacements</strong>, since an existing <strong class="font-medium">Disaster Internal Displacements (Raw)</strong> column is more precise</li>
               <li class="mt-2"><strong class="font-semibold">Hazard Category</strong>- since this is too broad of a basis for the type of disaster</li>
               <li class="mt-2"><strong class="font-semibold">Hazard Sub Type</strong>- since this is too specific of a basis for the type of disaster</li>
               <li class="mt-2"><strong class="font-semibold">Event codes</strong>- since this is predominantly filled with null values</li>
