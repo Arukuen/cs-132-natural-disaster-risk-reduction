@@ -152,7 +152,7 @@
         </h2>
         <div id="accordion-collapse-body-5" class="hidden" aria-labelledby="accordion-collapse-heading-5">
           <div class="p-5 border-gray-300 border-b-[1px] ">
-            <p class="mb-2">This resulted in an Excel file with 2567 events of internal displacement.</p>
+            <p class="mb-2">This resulted in an Excel file with 2567 events of internal displacement. Each event pertains to a natural disaster that caused internal displacement. Of these events, 506 were from Philippines, 1766 were from Indonesia, and 294 were from Vietnam.</p>
           </div>
         </div>
 
@@ -166,7 +166,7 @@
         </h2>
         <div id="accordion-collapse-body-2" class="hidden" aria-labelledby="accordion-collapse-heading-2">
           <div class="p-5 border-gray-300 border-b-[1px] ">
-            <p class="mb-2">The data was obtained from querying the entire database relating to internal displacement from disasters, from the countries listed, and from the range of 2008-2022.</p>
+            <p class="mb-2">The data was obtained from downloading the validated Displacement Data from the <a href="https://www.internal-displacement.org/database/displacement-data/" class="bg-primary text-white font-bold px-2">iDMC data portal.</a> We then perform a query to look at <strong>Internal Displacements</strong>, <strong>Disasters</strong>, set the Countries to <strong>Philippines</strong>, <strong>Viet Nam</strong>, and <strong>Indonesia</strong>, and finally, the Timescale to be the range of <strong>2008 - 2022</strong>.</p>
           </div>
         </div>
 
@@ -207,8 +207,16 @@
     <h3 class="text-xl font-semibold my-6 mx-2 md:mx-6 lg:mx-24">
       Data Preprocessing
     </h3>
-    <p class="my-2 lg:mx-24">We remove columns such as Event name, Date of Event, Disaster Internal Displacements, Hazard Category, Hazard Sub Type, and Event Codes (Code:Type). This leads to the dataset only having the columns ISO3, Country / Territory, Year, Disaster Internal Displacements (Raw), and Hazard Type.</p>
-
+    <p class="my-2 lg:mx-24">Since the data was already validated from the database of iDMC, data preprocessing is limited to choosing from the categories provided from the dataset. We remove the following columns:
+      <ul>
+        <li><strong>Event name</strong>, since we are more interested in the number of events per year rather than each individual event,</li>
+        <li><strong>Data of Event</strong>, since an existing <strong>Year</strong> column will be used in place of this,</li>
+        <li><strong>Disaster Internal Displacements</strong>, since an existing <strong>Disaster Internal Displacements (Raw)</strong> column is more precise,</li>
+        <li><strong>Hazard Category</strong>, since this is too broad of a basis for the type of disaster,</li>
+        <li><strong>Hazard Sub Type</strong>, since this is too specific of a basis for the type of disaster, and</li>
+        <li><strong>Event codes</strong>, since this is predominantly filled with null values.</li>
+      </ul>
+      This leads to the dataset only having the columns <strong>ISO3</strong>, <strong>Country / Territory</strong>, <strong>Year</strong>, <strong>Disaster Internal Displacements (Raw)</strong>, and <strong>Hazard Type</strong>.</p>
     <h3 class="text-xl font-semibold my-6 mx-2 md:mx-6 lg:mx-24">
       Visualization
     </h3>
