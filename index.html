@@ -233,8 +233,9 @@
       <div class="bg-gray-300 border text-left rounded-md shadow w-1/2">
         <h5 class="text-2xl font-bold tracking-tight mb-3 bg-darkerblue rounded-t-md text-white px-4 py-2">Research Question 1</h5>
         <div class="py-4 px-2 font-semibold text-lg text-justify">
-          <p class="mb-2 mx-4">The one way ANOVA's result reveal a <span class="text-secondary">p-value of 1.67e-12</span>, which is less than 0.05. This means we reject the null hypothesis, indicating that there is <span class="text-secondary">a significant difference among the three countries (PH, VN, ID)</span> in terms of their internal displacement</p>
-          <p class="mb-2 mx-4">Despite being within the same area in southeast asia, there appears to be a difference in displacement patterns. Based on initial data exploration (and as observed from the plots answering the research questions), this difference is most likely due to <span class="text-secondary">Philippines having a much higher displacement compared to the other two countries</span>. However, the data could be influenced by other factors as well (e.g., unreported events causing low displacement figures), so it is best to conduct further tests upon availability of data to derive definite conclusions.</p>
+          <p class="mb-2 mx-4">Following the interpretation that Philippines has significantly more IDPs compared to Vietnam and Indonesia, <span class="text-secondary">internal displacements do not seem to have a direct correlation with the number of events</span> that caused internal displacements. From the dataset, 294 events were reported from Vietnam, 506 were reported from the Philippines, and 1766 events were reported from Indonesia. This means that the <span class="text-secondary">factor of unreported events is not the reason for the Philippines' significantly higher number of  internal displacements</span> since Indonesia had more recorded events, and yet a significantly lower number of internal displacements. </p>
+          <p class="mb-2 mx-4">Considering that the quantity of natural disasters may not be the problem, we consider the <span class="text-secondary">quality or severity of the natural disasters</span> instead. We first compare the severity between the three countries using the data found at Inform Risk (source) by looking at the country risk profile for each. It shows that the <span class="text-secondary">Philippines has a risk class of “High” while the other two have a “Medium” risk class</span>. This may explain the significant difference between the Philippines and the other two countries.</p>
+          <p class="mb-2 mx-4">However, the data could be influenced by other factors as well, so it is best to conduct further tests upon availability of data to derive definite conclusions.</p>
         </div>
         <h5 class="text-lg font-bold tracking-tight bg-darkerblue rounded-b-md">&nbsp;</h5>
       </div>
@@ -308,11 +309,10 @@
             <p class="text-lg mt-12">This leads to the dataset only having the columns <span class="text-secondary"> ISO3 Country / Territory, Year, Disaster Internal Displacements (Raw)</span>, and <span class="text-secondary">Hazard Type.</span></p>
           </div>
           <div class="flex justify-center items-center mt-16">
-            <div class="bg-primary border border-gray-800 shadow w-5/6  ">
-              <img class="" src="./RQ2.png" alt="RQ2" />
+            <div class="bg-darkerblue border border-gray-800 shadow w-5/6  ">
+              <img class="w-full" src="./assets/head.png" alt="head" />
               <div class="p-5">
-                  <h5 class="text-2xl font-bold tracking-tight text-white mb-3">Total Internal Displacements per Natural Disasters in the Philippines from 2008 to 2022</h5>
-                  <p class="mb-3 font-normal text-white">The graph shows a bar graph that distribute the internal displacements per natural disasters. We can see that storm and flood are the most common cause of displacements every year, which we can relate to the Philippines being geographically near the Pacific ocean.</p>
+                  <h5 class="text-lg font-semibold tracking-tight text-white">Table 1. Preview of data head</h5>
               </div>
             </div>
           </div>
@@ -358,13 +358,16 @@
   <div id="modal3" class="modal fixed inset-0 bg-gray-900 bg-opacity-50 flex items-center justify-center hidden">
     <div class="bg-tertiary rounded-lg shadow-lg overflow-hidden w-3/5 max-h-full">
         <div class="p-4 overflow-y-auto max-h-[75vh] px-32 py-16">
-          <div class="flex flex-col items-center justify-center gap-10 my-2 ">
+          <div class="flex flex-col items-center justify-center gap-4 my-2 ">
             <h1 class="text-3xl font-semibold text-center text-primary mb-2">Hypothesis Testing</h1>
             <p class="font-medium text-justify text-lg">To determine whether a significant difference exists among the three southeast asian countries, a one-way ANOVA is performed, with the country as the predictor variable and the number of internally displaced persons as the outcome variable.</p>
             <div class="flex justify-center">
               <img src="./assets/hypo_test.png" alt="ANOVA" class="my-6 lg:mx-24" />
             </div>
-        </div>
+            <p class="font-medium text-justify text-lg">The one way ANOVA's result reveal a <span class="text-secondary">p-value of 1.67e-12</span>, which is less than 0.05. This means we reject the null hypothesis, indicating that there is <span class="text-secondary">a significant difference among the three countries (PH, VN, ID)</span> in terms of their internal displacement</p>
+            <p class="font-medium text-justify text-lg">Despite being within the same area in southeast asia, there appears to be a difference in displacement patterns. Based on initial data exploration (and as observed from the plots answering the research questions), this difference is most likely due to <span class="text-secondary">Philippines having a much higher displacement compared to the other two countries</span>. However, the data could be influenced by other factors as well (e.g., unreported events causing low displacement figures), so it is best to conduct further tests upon availability of data to derive definite conclusions.</p>
+            <p class="font-medium text-justify text-lg">Further testing using <span class="text-secondary">Mann-Whitney</span>, it can be confirmed that the Philippines is the group with the significantly different IDP, with Indonesia and Vietnam having no significant difference (p value = 0.14657) and Philippines showing significant difference for both.</p>
+          </div>
     </div>
   </div>
 
