@@ -118,7 +118,7 @@
     </div>
   </section>
 
-  <section id="data" class="lg:px-24 lg:py-6 px-4 py-2 mb-12 text-black ">
+  <section id="data" class="lg:px-24 lg:py-6 px-4 py-2 mb-16 text-black ">
     <h1 class="text-3xl font-bold text-primary text-center mb-10">Data</h1>
     <div class="flex flex-col md:flex-row items-center justify-center gap-12">
       <div class="text-center">
@@ -202,56 +202,18 @@
     </div>
   </section>
 
-  <section id="methods" class="lg:px-24 lg:py-6 px-4 py-2 text-left">
-    <h1 class="text-3xl font-bold text-primary text-center">Methods</h1>
-
-    <h3 class="text-xl font-semibold my-6 mx-2 md:mx-6 lg:mx-24">
-      Data Preprocessing
-    </h3>
-    <p class="my-2 lg:mx-24">Since the data was already validated from the database of iDMC, data preprocessing is limited to choosing from the categories provided from the dataset. We remove the following columns:
-      <ul>
-        <li><strong>Event name</strong>, since we are more interested in the number of events per year rather than each individual event,</li>
-        <li><strong>Data of Event</strong>, since an existing <strong>Year</strong> column will be used in place of this,</li>
-        <li><strong>Disaster Internal Displacements</strong>, since an existing <strong>Disaster Internal Displacements (Raw)</strong> column is more precise,</li>
-        <li><strong>Hazard Category</strong>, since this is too broad of a basis for the type of disaster,</li>
-        <li><strong>Hazard Sub Type</strong>, since this is too specific of a basis for the type of disaster, and</li>
-        <li><strong>Event codes</strong>, since this is predominantly filled with null values.</li>
-      </ul>
-      This leads to the dataset only having the columns <strong>ISO3</strong>, <strong>Country / Territory</strong>, <strong>Year</strong>, <strong>Disaster Internal Displacements (Raw)</strong>, and <strong>Hazard Type</strong>.</p>
-    <h3 class="text-xl font-semibold my-6 mx-2 md:mx-6 lg:mx-24">
-      Visualization
-    </h3>
-    <div class="flex flex-col md:flex-row items-center justify-center gap-10 my-2 lg:mx-24">
-      <div class="w-5/6">
-        <div class="bg-primary border border-gray-800 shadow">
-          <img class="" src="./RQ1.png" alt="RQ1" />
-          <div class="p-5">
-              <h5 class="text-2xl font-bold tracking-tight text-white mb-3">Total Internal Displacements in Indonesia, Philippines, and Vietnam from 2008 to 2022.</h5>
-              <p class="mb-3 font-normal text-white">To answer <b>research question 1</b>, we want to visualize the number of internal displacement reports in the three Southeast Asian countries (Philippines, Vietnam, and Indonesia) over the years (2008-2022).</p>
-
-              <p class="mb-3 font-normal text-white">From initial observation, it is apparent that the number of internal displaced persons in the Philippines is consistently higher than the two other countries, with Vietnam and Indonesia never going above 2,000,000, and the Philippines going as high as 7,000,000. The significance of such difference between the countries is left to the hypothesis testing (see Hypothesis Test), but initial observation indicates greater displacement in the Philippines compared to other Southeast Asian countries like Vietnam and Indonesia.</p>
-
-              <p class="mb-3 font-normal text-white">Some notable events in the Philippines include the Super Typhoon Yolanda (2013), Super Typhoon Glenda (2014), and Super Typhoon Ferdie (2016).</p>
-          </div>
-        </div>
-      </div>
-      <div class="w-5/6">
-        <div class="bg-primary border border-gray-800 shadow ">
-          <img class="" src="./RQ2.png" alt="RQ2" />
-          <div class="p-5">
-              <h5 class="text-2xl font-bold tracking-tight text-white mb-3">Total Internal Displacements per Natural Disasters in the Philippines from 2008 to 2022</h5>
-              <p class="mb-3 font-normal text-white">The graph shows a bar graph that distribute the internal displacements per natural disasters. We can see that storm and flood are the most common cause of displacements every year, which we can relate to the Philippines being geographically near the Pacific ocean.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <h3 class="text-xl font-semibold my-6 mx-2 md:mx-6 lg:mx-24">
-      Hypothesis Testing
-    </h3>
-    <p class="my-2 lg:mx-24">To determine whether a significant difference exists among the three southeast asian countries, a one-way ANOVA is performed, with the country as the predictor variable and the number of internally displaced persons as the outcome variable.</p>
-    <div class="flex justify-center">
-      <img src="./assets/hypo_test.png" alt="ANOVA" class="my-6 lg:mx-24" />
+  <section id="methods" class="lg:px-24 lg:py-6 px-4 py-2 text-left mb-16">
+    <h1 class="text-3xl font-bold text-primary text-center mb-8">Methods</h1>
+    <div class="flex flex-row justify-around mx-6">
+      <button class="openModalBtn bg-primary text-white w-1/4 h-16 rounded m-2 text-2xl font-semibold" data-modal="modal1">
+        Data Preprocessing
+      </button>
+      <button class="openModalBtn bg-primary text-white w-1/4 h-16 rounded m-2 text-2xl font-semibold" data-modal="modal2">
+        Visualization
+      </button>
+      <button class="openModalBtn bg-primary text-white w-1/4 h-16 rounded m-2 text-2xl font-semibold" data-modal="modal3">
+        Testing
+      </button>
     </div>
   </section>
 
@@ -306,7 +268,112 @@
       </div>
     </div>
   </section>
-  
+
+  <!-- Modal 1 -->
+  <div id="modal1" class="modal fixed inset-0 bg-gray-900 bg-opacity-50 flex items-center justify-center hidden">
+  <div class="bg-tertiary rounded-lg shadow-lg overflow-hidden w-3/5 max-h-full">
+      <div class="overflow-y-auto max-h-[75vh] px-32 py-16">
+          <div class="space-y-4">
+            <h3 class="text-3xl font-bold text-center text-primary mb-12">
+              Data Preprocessing
+            </h3>
+            <p class="text-lg">Since the data was already validated from the database of <span class="text-secondary">iDMC</span>, data preprocessing is limited to choosing from the categories provided from the dataset. We remove the following columns:</p>
+            <ul class="px-16">
+              <li class="mt-2"><strong class="font-semibold">Event name</strong>- since we are more interested in the number of events per year rather than each individual event</li>
+              <li class="mt-2"><strong class="font-semibold">Data of Event</strong>- since an existing <strong>Year</strong> column will be used in place of this</li>
+              <li class="mt-2"><strong class="font-semibold">Disaster Internal Displacements</strong>, since an existing <strong>Disaster Internal Displacements (Raw)</strong> column is more precise</li>
+              <li class="mt-2"><strong class="font-semibold">Hazard Category</strong>- since this is too broad of a basis for the type of disaster</li>
+              <li class="mt-2"><strong class="font-semibold">Hazard Sub Type</strong>- since this is too specific of a basis for the type of disaster</li>
+              <li class="mt-2"><strong class="font-semibold">Event codes</strong>- since this is predominantly filled with null values</li>
+            </ul>
+            <p class="text-lg mt-12">This leads to the dataset only having the columns <span class="text-secondary"> ISO3 Country / Territory, Year, Disaster Internal Displacements (Raw)</span>, and <span class="text-secondary">Hazard Type.</span></p>
+          </div>
+          <div class="flex justify-center items-center mt-16">
+            <div class="bg-primary border border-gray-800 shadow w-5/6  ">
+              <img class="" src="./RQ2.png" alt="RQ2" />
+              <div class="p-5">
+                  <h5 class="text-2xl font-bold tracking-tight text-white mb-3">Total Internal Displacements per Natural Disasters in the Philippines from 2008 to 2022</h5>
+                  <p class="mb-3 font-normal text-white">The graph shows a bar graph that distribute the internal displacements per natural disasters. We can see that storm and flood are the most common cause of displacements every year, which we can relate to the Philippines being geographically near the Pacific ocean.</p>
+              </div>
+            </div>
+          </div>
+      </div>
+  </div>
+</div>
+
+  <!-- Modal 2 -->
+  <div id="modal2" class="modal fixed inset-0 bg-gray-900 bg-opacity-50 flex items-center justify-center hidden">
+  <div class="bg-tertiary rounded-lg shadow-lg overflow-hidden w-3/5 max-h-full">
+      <div class="p-4 overflow-y-auto max-h-[75vh] px-32 py-16">
+        <div class="flex flex-col items-center justify-center gap-10 my-2 ">
+          <h1 class="text-2xl font-semibold text-center text-primary mb-2"><span class="text-secondary">Research Question 1:</span> What are the trends in internal displacement caused by natural disasters in the Philippines, and how does it compare to other Southeast Asian countries?</h1>
+          <p class="font-semibold text-justify text-lg">To answer this research question, we want to visualize the number of internal displacement reports in the three Southeast Asian countries (Philippines, Vietnam, and Indonesia) over the years (2008-2022).</p>
+          <div class="w-5/6">
+            <div class="bg-primary border border-gray-800 shadow">
+              <img class="" src="./RQ1.png" alt="RQ1" />
+              <div class="p-5">
+                  <h5 class="text-2xl font-bold tracking-tight text-white mb-3">Total Internal Displacements in Indonesia, Philippines, and Vietnam from 2008 to 2022.</h5>
+              </div>
+            </div>
+          </div>
+          <p class="mb-1 font-medium text-justify text-lg">From initial observation, it is apparent that the number of internal displaced persons in the Philippines is consistently higher than the two other countries, with Vietnam and Indonesia never going above 2,000,000, and the Philippines going as high as 7,000,000. The significance of such difference between the countries is left to the hypothesis testing (see Hypothesis Test), but initial observation indicates greater displacement in the Philippines compared to other Southeast Asian countries like Vietnam and Indonesia.</p>
+          <p class="mb-3 font-medium text-justify text-lg">Some notable events in the Philippines include the Super Typhoon Yolanda (2013), Super Typhoon Glenda (2014), and Super Typhoon Ferdie (2016).</p>
+          
+          <h1 class="text-2xl font-semibold text-center text-primary mb-2"><span class="text-secondary">Research Question 2:</span> How does the type of natural disaster and the existing policies influence the number of displaced individuals within the Philippines?</h1>
+          <div class="w-5/6">
+            <div class="bg-primary border border-gray-800 shadow ">
+              <img class="" src="./RQ2.png" alt="RQ2" />
+              <div class="p-5">
+                  <h5 class="text-2xl font-bold tracking-tight text-white mb-3">Total Internal Displacements per Natural Disasters in the Philippines from 2008 to 2022</h5>
+              </div>
+            </div>
+          </div>
+          <p class="mb-1 font-medium text-justify text-lg">From initial observation, it is apparent that storms and floods are the most common cause of internal displacement in the country for any given year, going as high as 6.6 million IDPs for storm disasters (2013) and 1.5 million IDPs for floods (2012). For reference, the third most common cause of displacement, earthquakes, peaked at around 400,000 IDPs in 2019, while other disasters relatively rarely cause displacement. The reason for this can be traced to the fact that the Philippines is geographically located within the Pacific Typhoon Belt – a region particularly prone to typhoons <a href='https://www.adrc.asia/nationinformation.php?NationCode=608&Lang=en'>[2]</a>.</p>
+          <p class="mb-3 font-medium text-justify text-lg">An analysis of the different hazards and their prevalence sets the stage for more optimal discussions on disaster risk reduction and management, especially in consideration of existing efforts and policies.</p>
+        </div>
+      </div>
+  </div>
+</div>
+
+  <!-- Modal 3 -->
+  <div id="modal3" class="modal fixed inset-0 bg-gray-900 bg-opacity-50 flex items-center justify-center hidden">
+    <div class="bg-tertiary rounded-lg shadow-lg overflow-hidden w-3/5 max-h-full">
+        <div class="p-4 overflow-y-auto max-h-[75vh] px-32 py-16">
+          <div class="flex flex-col items-center justify-center gap-10 my-2 ">
+            <h1 class="text-3xl font-semibold text-center text-primary mb-2">Hypothesis Testing</h1>
+            <p class="font-medium text-justify text-lg">To determine whether a significant difference exists among the three southeast asian countries, a one-way ANOVA is performed, with the country as the predictor variable and the number of internally displaced persons as the outcome variable.</p>
+            <div class="flex justify-center">
+              <img src="./assets/hypo_test.png" alt="ANOVA" class="my-6 lg:mx-24" />
+            </div>
+        </div>
+    </div>
+  </div>
+
+  <script>
+    // JavaScript to handle modal opening and closing
+    const openModalBtns = document.querySelectorAll('.openModalBtn');
+    const closeModalBtns = document.querySelectorAll('.closeModalBtn');
+
+    openModalBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const modalId = btn.getAttribute('data-modal');
+            document.getElementById(modalId).classList.remove('hidden');
+        });
+    });
+
+    closeModalBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            btn.closest('.modal').classList.add('hidden');
+        });
+    });
+
+    // Close modal on clicking outside the modal content
+    window.addEventListener('click', (e) => {
+        if (e.target.classList.contains('modal')) {
+            e.target.classList.add('hidden');
+        }
+    });
+  </script>
   <script src="./flowbite.min.js"></script>
 </body>
 </html>
